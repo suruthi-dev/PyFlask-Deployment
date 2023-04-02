@@ -1,0 +1,37 @@
+<html>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='diab_home.jpg')}});
+        background-attached:fixed;
+        background-repeat:no-repeat;
+        background-size:cover
+        }
+    </style>
+    <body>
+
+        <center>
+            <h4> Diabetes is a dangerous and life-threatening disease.</h4>
+                <h4>Early identification of your risk is a critical step in the prevention of diabetes and/or its complications.</h4>
+        <h1> Diabetes Screening Test </h1>
+         <h2> Please Enter your : <b><br><br>
+             1.Glucose level<br>
+             2.BloodPressure<br>
+             3.Insulin level<br>
+             4.Age <br></b> </h2>
+
+
+        <form method="POST", action="{{url_for('logreg_pred')}}">
+           <b> Glucose :  <input type="text", name='a', placeholder="enter 1"> <br><br>
+            BloodPressure :  <input type="text", name='b', placeholder="enter 2"> <br><br>
+            Insulin :  <input type="text", name='c', placeholder="enter 3"> <br><br>
+            Age: <input type="text", name='d', placeholder="enter 4"> <br><br><br></b>
+            <input type="submit" , value='predict!' >
+        </form>
+
+<!--        <img src='static\diabetes-vector.avif' alt="diabetes">-->
+
+    </center>
+
+    </body>
+</html>

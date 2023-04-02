@@ -1,0 +1,38 @@
+
+<html>
+ <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='bg.jpg')}});
+        background-attached:fixed;
+        background-repeat:no-repeat;
+        background-size:cover
+        }
+    </style>
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1>  PREDICTION :  </h1>
+    
+    {%if data == 0%}
+    <h1>No Diabetes Traits Detected </h1>
+    <h1> Health is Wealth</h1>
+    <img src='static\yes diabetes.jpg' alt="diabetes">
+
+
+    {%else%}
+        <h1> Diabetes Traits Detected </h1>
+        <h1>You have Diabetes Please Go Check it Out </h1>
+        <img src='static\insulin.jpg' alt="diabetes">
+    
+    {%endif%}
+
+    <br><br>
+        <div style="background-color: white;width:200px"> <a href = '/diabetes' > Go Back To Diabetes Prediction </a></div>
+        <div style="background-color: white;width:200px"> <a href = '/' > Go Back To Home Page</a></div>
+    </center>
+
+</body>
+
+</html>

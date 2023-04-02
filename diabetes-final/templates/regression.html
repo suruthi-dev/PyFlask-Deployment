@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='1.jpg')}});
+        background-attached:fixed;
+        background-repeat:no-repeat;
+        background-size:cover
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>REGRESSION</title>
+</head>
+<body bgcolor=#d4a3ae>
+
+<div style="background-color: white;width:700">
+   <h1> Predict Students Marks based on Number of Study-Hours and Courses Taken !</h1>
+</div>
+
+
+<form action = "{{url_for('linreg_pred')}}" method="post">
+    <div style="background-color: #aec5eb;width:200px"><b>NUMBER OF COURSES :</div> <input type="text" name='course' placeholder ='enrolled courses'><br><br>
+    <div style="background-color: #aec5eb;width:120px"><b>STUDY TIME :</div> <INPUT type="text" name = 'time' placeholder="studying time">
+
+    </div>
+
+
+<input type="submit" , value='predict!' >
+</form>
+<br><br>
+
+<div style="background-color: white;width:400px">
+    {{ output }}
+</div>
+
+<br><br>
+<div style="background-color: white;width:200px"> <a href = '/' > Go Back To Home Page</a></div>
+</body>
+</html>

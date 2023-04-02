@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='home.jpg')}});
+        background-attached:fixed;
+        background-repeat:no-repeat;
+        background-size:cover
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<div style="background-color: white;width:850px">
+   <h1> Select the Model to Proceed with Regression or Classification </h1>
+</div>
+
+<br>
+<form action = "{{url_for('marks')}}" method="post">
+    <button id = 'stud' type="submit"> REGRESSION</button>
+</form>
+
+<form action = "{{url_for('diabetes')}}" method="post">
+    <button id = 'diabetes_value' type="submit">CLASSIFICATION</button>
+</form>
+
+</body>
+</html>
